@@ -259,16 +259,15 @@ h2 {
 }
 
 
-.hebergements-cards {
+.cards {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: -3px;
+    flex-flow: wrap;
+    gap: 30px;
 }
 
 .lien-card {
-    width: 28%; min-width: 120px;
+    width: 28%;
+    min-width: 120px;
     background-color: white;
     padding: 5px;
     margin-top: 33px;
