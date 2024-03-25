@@ -36,12 +36,16 @@ img {
     object-fit: contain;
 }
 
+
+
+
 /****** Main ***********/
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    
 }
 
 
@@ -118,7 +122,7 @@ form i {
     z-index: 10;
 }
 
-
+/****** search-box ***********/
 form input {
     padding: 15px 50px;
     border: 1px solid var(--main-bg-color);
@@ -128,7 +132,7 @@ form input {
 
 }
 
-
+/****** search-button ***********/
 form button {
     padding: 15px 20px;
     border: none;
@@ -220,6 +224,8 @@ h2 {
 
 .card-title {
     font-size: 16px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .euro {
@@ -263,18 +269,22 @@ h2 {
     display: flex;
     flex-flow: wrap;
     gap: 30px;
+    width: 100%;
 }
 
+
+
 .lien-card {
-    width: 28%;
-    min-width: 120px;
+    width: calc((100% - 90px) / 3);
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 5px;
-    margin-top: 33px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px var (--main-bg-color);
 
 }
+
 
 .lien-card img {
     width: 100%;
@@ -284,6 +294,7 @@ h2 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 
 .card-content-hebergements {
     width: 67%;
@@ -296,17 +307,13 @@ h2 {
 
 }
 
-.buttonplus {
-    position: static;
-    right: 10px;
-    bottom: 100px;
-    padding-left: 10px;
-}
 
 .card-title-hebergements {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    line-height: 13px;
     margin-bottom: 5px;
-    margin: -1px;
 }
 
 
@@ -315,13 +322,13 @@ h2 {
     margin-right: -5px;
 }
 
+
 .buttonplus {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
     padding-left: 10px;
 }
-
 
 a {
     align-content: space-between;
@@ -329,6 +336,7 @@ a {
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
+    
 
 }
 
@@ -351,6 +359,7 @@ a {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    width: 100%;
 }
 
 .populaires-cards img {
@@ -385,53 +394,77 @@ a {
 
 /****** Activites ***********/
 
-.activites {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 50px;
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+
 }
 
-
-
-.activity-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.activites-cards li {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px var(--main-bg-color);
+    font-size: 14px;
+    margin-top: 5px;
+    flex: 1;
+    list-style-type: none;
+
+
 }
 
-.activity-cards img {
-    width: 65%;
-    height: 136px;
-    object-fit: contain;
-    padding: 20px;
+.activites-cards ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 
-.activity-cards .card-title {
 
+.activites figcaption {
     margin-top: 10px;
-    margin-bottom: 4px;
-
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    line-height: 13px;
 }
 
 
-.activity-cards .card-subtitle {
-    margin: 0;
-}
 
 
-.footer {
+
+/****** Footer ***********/
+
+.footer-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
     margin-top: 50px;
+    
 }
+
+
+
+
+
 
 
 .footer a {
