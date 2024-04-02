@@ -144,6 +144,7 @@ form button {
     background-color: var(--main-color);
     color: white;
     font-weight: 500;
+
 }
 
 h2 {
@@ -403,6 +404,7 @@ a {
     color: black;
 
 }
+
 .activites {
     padding: 30px;
 }
@@ -507,6 +509,7 @@ footer h3 {
 
     .hebergements-and-populaires {
         flex-direction: column;
+
     }
 
     .hebergements {
@@ -538,81 +541,181 @@ footer h3 {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* logo */
+@media (max-width: 767.98px) and (min-width: 320px) {
 
-    nav {        
-        justify-content: center;
-        display: block;
-    
+    nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
     }
 
     nav img {
-       width: 60px;
-        margin: 20px 0px 20px 120px;
         max-width: 100%;
-        height: auto;
-        object-fit: cover;
-}
+        height: 80px;
+        margin-top: 20px;
+        margin-bottom: -10px;
+
+    }
 
     nav ul {
+        width: 50%;
         display: flex;
-        gap: 50px;
-        margin-left: -40px;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        padding: 0;
+
     }
-    
+
     nav a:hover,
     nav a:focus {
-    color: var(--main-color);
-    border-color: var(--main-color);
-    cursor: pointer;
-    border-bottom: 2px solid var(--main-color);
-    border-top: none;
+        color: var(--main-color);
+        border-color: var(--main-color);
+        cursor: pointer;
+        border-bottom: 2px solid var(--main-color);
+        border-top: none;
+
+    }
+
+    form {
+        margin-top: 30px;
+
+    }
+
+    form input {
+        margin-left: -30px;
+        margin-right: -60px;
+
+    }
+
+    form input::placeholder {
+        font-size: 15px;
+    }
+
+    form button {
+        border-radius: 15px 15px 15px 15px;
+        margin-left: -15px;
+        padding: 15px 5px;
+    }
+
+
+    .filters ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+   .filters li {
+        margin: 0;
+        z-index: 1;
+        flex: 1;
+        margin-bottom: 10px;
+
+    }
+
+    .btn-info {
+        margin-bottom: 0px;
+
+    }
+
+    /* Hebergements and Populaires */
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+
+    }
+
+    .hebergements-and-populaires section {
+        box-sizing: content-box;
+        margin-bottom: 20px;
+        padding-top: 20px;
+
+    }
+
+    /* Populaires */
+
+    .populaires {
+        margin-top: 20px;
+    }
+
+    .section-title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    /* Hebergements */
+
+    .hebergements {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .lien-card {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 5px
+    }
+
+    .card-title-hebergements {
+        margin-bottom: 10px;
+    }
+
+
+    .buttonplus {
+        margin-top: -20px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+
+    }
+
+    /* Activites */
+
+    .activites img {
+        width: 100%;
+        height: 100px;
+    }
+
+    .activites ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .activites .section-title {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+    }
+
+    footer ul a {
+        padding: 5px;
+        margin-left: -5px;
+
+    }
+
 }
-
-form input {
-    margin-left: -30px;
-    margin-right: -40px;
-
-}
-
-form button {
-    border-radius: 15px 15px 15px 15px;
-    margin-left: -15px;
-    padding: 15px 5px;
-    
-}
-
-.filters ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left: -40px;
-    margin-right: -35px;
-    margin-bottom: -10px;
-    
-    
-
-}
-    
-.filters li {
-    margin: 0;
-    z-index: 1;
-    flex: 1;
-    margin-bottom: 10px;
-    
-}
-
-
-}
-
-
-
-
-
-    
-
-
-
-
