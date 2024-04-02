@@ -43,11 +43,15 @@ img {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
     box-sizing: border-box;
 
 }
 
+header > *:not(nav), 
+main,
+footer {
+    padding:0 50px;
+} 
 
 /****** Header ***********/
 
@@ -69,17 +73,15 @@ nav img {
 nav ul {
     display: flex;
     list-style: none;
+    gap: 50px;
 
 }
 
-nav li {
-    margin-left: 40px;
-}
 
 nav a {
     padding: 20px 0;
     border-top: 3px solid transparent;
-
+    
 }
 
 nav a:hover,
@@ -108,7 +110,7 @@ p {
 form {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    
 }
 
 
@@ -121,23 +123,20 @@ form i {
 
 .fa-location-dot {
     color: black;
-    z-index: 10;
 }
 
 /****** search-box ***********/
 form input {
     padding: 15px 50px;
     border: 1px solid var(--main-bg-color);
-    border-radius: 15px 0 0 15px;
     font-weight: 700;
-    margin-left: -15px;
 
 }
 
 
 
 /****** search-button ***********/
-form button {
+.desktop {
     padding: 15px 20px;
     border: none;
     border-radius: 0 15px 15px 0;
@@ -145,6 +144,10 @@ form button {
     color: white;
     font-weight: 500;
 
+}
+
+.mobile {
+    display: none;
 }
 
 h2 {
@@ -333,12 +336,8 @@ h2 {
 }
 
 a {
-    align-content: space-between;
     color: black;
     text-decoration: none;
-    display: flex;
-    justify-content: flex-start;
-
 
 }
 
@@ -541,13 +540,17 @@ footer h3 {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) and (min-width: 320px) {
+@media (max-width: 767.98px) {
+
+    .main-container {
+        width: 100vw;
+    }
 
     nav {
         align-items: center;
         display: flex;
         flex-direction: column;
-
+        text-align: center;
     }
 
     nav img {
@@ -559,60 +562,58 @@ footer h3 {
     }
 
     nav ul {
+        width: 100%;
+        gap: 0;
+
+    }
+
+    nav li {
         width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 80px;
-        padding: 0;
-
     }
 
-    nav a:hover,
-    nav a:focus {
-        color: var(--main-color);
-        border-color: var(--main-color);
-        cursor: pointer;
-        border-bottom: 2px solid var(--main-color);
+    nav a { 
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid transparent;
         border-top: none;
-
+    
     }
+
 
     form {
-        margin-top: 30px;
+        margin: 30px auto 0;
 
     }
 
-    form input {
-        margin-left: -30px;
-        margin-right: -60px;
 
-    }
 
     form input::placeholder {
         font-size: 15px;
     }
 
-    form button {
+    .mobile {
+        display: block;
         border-radius: 15px 15px 15px 15px;
         margin-left: -15px;
         padding: 15px 5px;
     }
 
+    .desktop {
+        display: none;
+    }
 
     .filters ul {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
 
     }
 
    .filters li {
-        margin: 0;
-        z-index: 1;
-        flex: 1;
-        margin-bottom: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 1;
+    width: calc((100% - 10px) / 2);
+    
 
     }
 
@@ -676,7 +677,6 @@ footer h3 {
     .card-title-hebergements {
         margin-bottom: 10px;
     }
-
 
     .buttonplus {
         margin-top: -20px;
