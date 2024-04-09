@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 :root {
@@ -16,8 +17,8 @@
 body {
     display: flex;
     justify-content: center;
+    max-width: 1440px;
     margin: 0;
-
 }
 
 ul {
@@ -37,23 +38,41 @@ img {
 }
 
 
-
-
 /****** Main ***********/
 .main-container {
     width: 100%;
     max-width: 1440px;
+    padding: 0 50px;
     box-sizing: border-box;
 
 }
 
-header > *:not(nav), 
+header > *:not(nav),
 main,
 footer {
-    padding:0 50px;
-} 
+    padding: 0 50px;
+
+}
+
+main {
+    display: flex;
+    padding: 0px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    align-self: stretch;
+}
+
+
 
 /****** Header ***********/
+
+nav img {
+    width: 72px;
+    height: 19px;
+    margin-top: 30px;
+
+}
 
 nav {
     display: flex;
@@ -61,14 +80,7 @@ nav {
     align-items: center;
     padding: 0 0;
     margin: 0;
-
 }
-
-nav img {
-    width: 60px;
-    margin: 20px 0;
-}
-
 
 nav ul {
     display: flex;
@@ -77,11 +89,9 @@ nav ul {
 
 }
 
-
 nav a {
-    padding: 20px 0;
-    border-top: 3px solid transparent;
-    
+    padding: 10px 0;
+    border-top: 2px solid transparent;
 }
 
 nav a:hover,
@@ -89,28 +99,36 @@ nav a:focus {
     color: var(--main-color);
     border-color: var(--main-color);
     cursor: pointer;
+
 }
 
-
+nav li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 h1 {
-    margin: 10px 0;
-    font-size: 20px;
+    margin: 40px 0 15px 0;
+    font-size: 22px;
+    font-weight: 700;
 
 }
 
-
-p {
-    margin: 5px 0;
-    font-size: 14px;
+p.subtitle {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
 
 }
+
 
 
 form {
     display: flex;
     align-items: center;
-    
+
+
 }
 
 
@@ -122,29 +140,41 @@ form i {
 }
 
 .fa-location-dot {
+    font-size: larger;
     color: black;
+
 }
 
 /****** search-box ***********/
 form input {
-    padding: 15px 50px;
+    height: 49px;
+    padding: 0;
+    width: 195px;
+    height: 49px;
+    text-align: center;
     border: 1px solid var(--main-bg-color);
     font-weight: 700;
-
+    font-size: 18px;
+    outline: none;
 }
 
 
 
 /****** search-button ***********/
-.desktop {
-    padding: 15px 20px;
-    border: none;
-    border-radius: 0 15px 15px 0;
-    background-color: var(--main-color);
+form button {
+    display: flex;
+    height: 51px;
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid var(--main-color);
+    background: var(--main-color);
     color: white;
-    font-weight: 500;
-
+    font-weight: 700;
+    font-size: 18px;
 }
+
+
 
 .mobile {
     display: none;
@@ -152,7 +182,8 @@ form input {
 
 h2 {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 
@@ -178,13 +209,11 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 2px solid var(--main-bg-color);
+    border: 3px solid var(--main-bg-color);
     border-radius: 25px;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
-    cursor: pointer;
-
 }
 
 
@@ -200,17 +229,27 @@ h2 {
 
 
 .btn-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    color: var(--main-bg-color);
-    border: 2px solid var(--main-bg-color);
-    border-radius: 19px;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-
-
+    color: var(--main-color);
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    font-size: 12px;
 }
 
-
+p.info {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
 
 
 
@@ -243,8 +282,6 @@ h2 {
 .neutral-star {
     color: var(--main-bg-color)
 }
-
-
 
 
 
@@ -289,7 +326,7 @@ h2 {
     background-color: white;
     padding: 5px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px var (--main-bg-color);
+    box-shadow: 5px 5px 10px 1px var(--main-bg-color);
 
 }
 
@@ -343,9 +380,6 @@ a {
 
 
 
-
-
-
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -355,7 +389,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
+
+.populaires h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
 
 .populaires-cards .card {
     display: flex;
@@ -507,8 +549,10 @@ footer h3 {
     }
 
     .hebergements-and-populaires {
+        display: flex;
         flex-direction: column;
-
+        box-sizing: border-box;
+    
     }
 
     .hebergements {
@@ -518,12 +562,15 @@ footer h3 {
     .populaires {
         width: 100%;
         margin-top: 50px;
+
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between;;
+        gap: 30px;
+
     }
 
     .populaires-cards a {
@@ -537,14 +584,25 @@ footer h3 {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites img {
+    height: 200px;
+
+    }
+
 }
+
+
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
     .main-container {
         width: 100vw;
+        padding: 0;
+        margin: 0;
     }
+
 
     nav {
         align-items: center;
@@ -567,16 +625,22 @@ footer h3 {
 
     }
 
+
     nav li {
         width: 50%;
     }
 
-    nav a { 
+    nav a {
         display: block;
         width: 100%;
         border-bottom: 2px solid transparent;
+        border-top :none;
+        padding: 10px 0;
+
+    }
+
+    nav a:hover {
         border-top: none;
-    
     }
 
 
@@ -584,8 +648,6 @@ footer h3 {
         margin: 30px auto 0;
 
     }
-
-
 
     form input::placeholder {
         font-size: 15px;
@@ -595,10 +657,12 @@ footer h3 {
         display: block;
         border-radius: 15px 15px 15px 15px;
         margin-left: -15px;
-        padding: 15px 5px;
+        padding: 15px 15px;
+        background-color: var(--main-color);
+        color: white;
     }
 
-    .desktop {
+    form button {
         display: none;
     }
 
@@ -608,12 +672,12 @@ footer h3 {
 
     }
 
-   .filters li {
-    box-sizing: border-box;
-    margin: 0;
-    z-index: 1;
-    width: calc((100% - 10px) / 2);
-    
+    .filters li {
+        box-sizing: border-box;
+        margin: 0;
+        z-index: 1;
+        width: calc((100% - 10px) / 2);
+
 
     }
 
@@ -632,7 +696,6 @@ footer h3 {
     }
 
     .hebergements-and-populaires section {
-        box-sizing: content-box;
         margin-bottom: 20px;
         padding-top: 20px;
 
@@ -647,6 +710,8 @@ footer h3 {
     .section-title {
         margin-top: 20px;
         margin-bottom: 10px;
+
+
     }
 
     .populaires-cards {
