@@ -17,7 +17,6 @@
 body {
     display: flex;
     justify-content: center;
-    max-width: 1440px;
     margin: 0;
 }
 
@@ -289,6 +288,7 @@ p.info {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .hebergements-and-populaires section {
@@ -657,7 +657,7 @@ footer h3 {
     form input {
         width: 100%;
     }
-    
+
     .mobile {
         display: block;
         border-radius: 15px 15px 15px 15px;
