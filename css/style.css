@@ -175,7 +175,7 @@ form button {
 
 h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
 }
 
@@ -227,8 +227,8 @@ h2 {
     justify-content: center;
     background-color: white;
     color: var(--main-color);
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #D9D9D9;
     border-radius: 50%;
     font-size: 12px;
@@ -344,7 +344,7 @@ p.info {
 
 
 .card-title-hebergements {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     color: black;
     line-height: 13px;
@@ -353,13 +353,13 @@ p.info {
 
 
 .card-subtitle-hebergements {
-    font-size: 13px;
+    font-size: 14px;
     margin-right: -5px;
 }
 
 
 .buttonplus {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
     padding-left: 10px;
@@ -430,7 +430,7 @@ p.info {
 .section-title {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     color: black;
 
@@ -481,7 +481,7 @@ p.info {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     color: black;
     line-height: 13px;
@@ -515,7 +515,7 @@ footer ul {
 
 footer li {
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 16px;
     list-style-type: none;
     color: black;
     text-decoration: none;
@@ -523,7 +523,7 @@ footer li {
 }
 
 footer h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
     margin-top: 5px;
 }
@@ -537,6 +537,7 @@ footer h3 {
     .filters {
         flex-direction: column;
         align-items: baseline;
+        gap : 20px;
     }
 
     .hebergements-and-populaires {
@@ -775,13 +776,16 @@ footer h3 {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+        gap: 50px;
 
     }
 
     footer ul a {
         padding: 5px;
         margin-left: -5px;
+        
 
     }
 
+ 
 }
