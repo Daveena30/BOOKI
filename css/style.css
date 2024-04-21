@@ -42,7 +42,7 @@ img {
 a {
     color: black;
     text-decoration: none;
-    
+
 
 }
 
@@ -53,6 +53,7 @@ a {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+
 }
 
 /****** Header ***********/
@@ -67,6 +68,7 @@ a {
 
 }
 
+/****** logo ***********/
 .header_content {
     display: flex;
     align-items: center;
@@ -77,6 +79,7 @@ a {
     height: 19px;
 }
 
+/****** menu ***********/
 .menu {
     display: flex;
     list-style: none;
@@ -85,64 +88,53 @@ a {
 
 .active {
     border-top: 2px solid transparent;
+    /* transparent = pas de bordure top on mobile*/
     display: inline-block;
     padding-top: 15px;
     text-align: center;
     cursor: pointer;
-    
 }
 
 .active:hover {
     border-top: 2px solid var(--main-color);
-    color: var(--main-color);
 }
 
 /****** infos_group ***********/
 
-.infos_group {
-    margin-bottom: 25px;
-}
-
 .infos_group h1 {
     font-size: 22px;
     font-weight: 700;
-    line-height: 25.83px
-
-
 }
 
 p.subtitle {
     margin-bottom: 30px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 18.78px;
 }
 
+/****** search box ***********/
 form {
     display: flex;
     align-items: center;
 }
 
-
+/****** location dot ***********/
 form i {
     padding: 16px;
     background-color: var(--main-bg-color);
     border-radius: 15px 0 0 15px;
-
 }
 
 .fa-location-dot {
     color: black;
-
 }
 
-/****** search-box ***********/
+/****** input ***********/
 form input {
     padding: 13px 0px 13px 0px;
     border: 1px solid var(--main-bg-color);
     font-weight: 700;
     font-size: 1rem;
-
 }
 
 
@@ -161,28 +153,27 @@ form button {
     font-weight: 500;
 }
 
-
-
 .mobile {
     display: none;
+    /* no magnifying glass on desktop */
 }
 
+
+/****** filters ***********/
 h2 {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
 }
 
-
 .filters {
-    margin-top: 28px;
     display: flex;
     align-items: center;
+    margin-top: 28px;
     gap: 10px;
     margin-bottom: 28px;
 
 }
-
 
 .filters ul {
     display: flex;
@@ -212,8 +203,18 @@ h2 {
 
 .filters i {
     color: var(--main-color);
+    /* couleur de l'icon */
 }
 
+/****** button-info ***********/
+p.info {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
 
 .btn-info {
     display: flex;
@@ -228,33 +229,18 @@ h2 {
     font-size: 12px;
 }
 
-p.info {
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
     display: flex;
-    height: 24px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    font-size: 16px;
-    margin-bottom: 30px;
+    justify-content: space-between;
+
 }
 
-
-
-/****** Cards ***********/
-.card {
-    background-color: white;
+.hebergements-and-populaires section {
     border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
+    padding: 30px;
+    box-sizing: border-box;
 }
-
-
-.card img {
-    object-fit: cover;
-
-}
-
 
 .card-title {
     font-size: 16px;
@@ -270,32 +256,14 @@ p.info {
     color: var(--main-bg-color)
 }
 
-
-
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.hebergements-and-populaires section {
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
 /****** Hebergements ***********/
 
 
 .hebergements {
     width: 65%;
     background-color: var(--main-bg-color);
-    border-radius: 20px;
     padding: 30px 0;
-    box-sizing: border-box;
 }
-
 
 .cards {
     display: flex;
@@ -303,8 +271,6 @@ p.info {
     gap: 30px;
     width: 100%;
 }
-
-
 
 .lien-card {
     width: calc((100% - 90px) / 3);
@@ -314,7 +280,6 @@ p.info {
     padding: 5px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 1px var(--main-bg-color);
-
 }
 
 
@@ -327,15 +292,12 @@ p.info {
     border-top-right-radius: 20px;
 }
 
-
 .card-content-hebergements {
     padding: 10px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-
 }
-
 
 .card-title-hebergements {
     font-size: 16px;
@@ -351,7 +313,7 @@ p.info {
     margin-right: -5px;
 }
 
-
+/****** Afficher plus ***********/
 .buttonplus {
     font-size: 18px;
     font-weight: bold;
@@ -360,15 +322,13 @@ p.info {
 }
 
 
-
-
-
 /****** Populaires ***********/
 .populaires {
     width: 32%;
     background-color: var(--main-bg-color);
 }
 
+/****** Populaires-title and chart line***********/
 .populaires-title {
     display: flex;
     justify-content: space-between;
@@ -376,6 +336,7 @@ p.info {
 
 }
 
+/****** Populaires-title ***********/
 .populaires h2 {
     font-size: 22px;
     font-weight: 700;
@@ -387,6 +348,18 @@ p.info {
     display: flex;
     margin-top: 33px;
     width: 100%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+
 }
 
 .populaires-cards img {
@@ -418,8 +391,11 @@ p.info {
     margin-bottom: 5px;
 }
 
-
 /****** Activites ***********/
+
+.activites {
+    padding: 30px;
+}
 
 .section-title {
     margin-top: 20px;
@@ -427,13 +403,7 @@ p.info {
     font-size: 22px;
     font-weight: bold;
     color: black;
-
 }
-
-.activites {
-    padding: 30px;
-}
-
 
 .activites ul {
     display: flex;
@@ -443,8 +413,6 @@ p.info {
     padding: 0
 }
 
-
-
 .activites li {
     background-color: white;
     border-radius: 20px;
@@ -453,8 +421,6 @@ p.info {
     margin-top: 5px;
     width: calc((100% - 90px) / 4);
     list-style-type: none;
-
-
 }
 
 .activites figure {
@@ -468,8 +434,6 @@ p.info {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
-
 
 .activites figcaption {
     margin-top: 10px;
@@ -493,16 +457,18 @@ footer {
     justify-content: space-between;
     gap: 20px;
     margin-top: 50px;
-
 }
 
-
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
 
 footer ul {
     margin: 0;
     padding: 0;
 }
-
 
 footer li {
     margin-bottom: 5px;
@@ -510,13 +476,6 @@ footer li {
     list-style-type: none;
     color: black;
     text-decoration: none;
-
-}
-
-footer h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-top: 5px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -528,11 +487,10 @@ footer h3 {
     .filters {
         flex-direction: column;
         align-items: baseline;
-        gap : 20px;
+        gap: 20px;
     }
 
     .hebergements-and-populaires {
-
         flex-direction: column;
     }
 
@@ -562,12 +520,7 @@ footer h3 {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-
-
-
 }
-
-
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -657,6 +610,7 @@ footer h3 {
         color: white;
     }
 
+    /******** To hide button rechercher in mobile ***********/
     form button {
         display: none;
     }
@@ -673,11 +627,6 @@ footer h3 {
         width: calc((100% - 10px) / 2);
     }
 
-    .btn-info {
-        margin-bottom: 0px;
-
-    }
-
     /* Hebergements and Populaires */
 
     .hebergements-and-populaires {
@@ -685,14 +634,11 @@ footer h3 {
         flex-direction: column-reverse;
         justify-content: space-between;
         width: 100%;
-
     }
 
     .hebergements-and-populaires section {
         margin-bottom: 20px;
         padding-top: 20px;
-
-
     }
 
     /* Populaires */
@@ -704,8 +650,6 @@ footer h3 {
     .section-title {
         margin-top: 20px;
         margin-bottom: 10px;
-
-
     }
 
     .populaires-cards {
@@ -741,7 +685,6 @@ footer h3 {
         margin-top: -20px;
         margin-bottom: 0px;
         padding-left: 0px;
-
     }
 
     /* Activites */
@@ -752,7 +695,6 @@ footer h3 {
         padding: 0;
     }
 
-
     .activites img {
         width: 100%;
         height: 100px;
@@ -762,7 +704,6 @@ footer h3 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
 
     .activites li {
@@ -780,15 +721,12 @@ footer h3 {
         flex-direction: column;
         margin-top: 20px;
         gap: 50px;
-
     }
 
-    footer ul a {
+    footer li a {
         padding: 5px;
         margin-left: -5px;
-        
-
     }
 
- 
+
 }
