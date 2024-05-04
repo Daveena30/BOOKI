@@ -84,12 +84,11 @@ a {
     display: flex;
     list-style: none;
     gap: 68px;
+
 }
 
 .active {
-    border-top: 2px solid transparent;
-    /* transparent = pas de bordure top on mobile*/
-    display: inline-block;
+    display: inline-block; /**** Pour que les menus ne se collent pas en haut de la page ****/
     padding-top: 15px;
     text-align: center;
     cursor: pointer;
@@ -97,6 +96,7 @@ a {
 
 .active:hover {
     border-top: 2px solid var(--main-color);
+    color: var(--main-color);
 }
 
 /****** infos_group ***********/
@@ -112,7 +112,7 @@ p.subtitle {
     font-weight: 400;
 }
 
-/****** search box ***********/
+/****** search box toute la formulaire de recherche ***********/
 form {
     display: flex;
     align-items: center;
@@ -208,7 +208,7 @@ h2 {
 
 /****** button-info ***********/
 p.info {
-    display: flex;
+    display: flex; /* pour aligner au meme niveau texte et l'icon */
     height: 24px;
     align-items: center;
     gap: 10px;
@@ -232,14 +232,14 @@ p.info {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pour espacer mon logo et mes liens et les avoir sur la meme ligne*/
 
 }
 
 .hebergements-and-populaires section {
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Pour qu il ait pas de debordement entre mes cases*/
 }
 
 .card-title {
@@ -267,7 +267,7 @@ p.info {
 
 .cards {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap; /* Pour que mes cases se mettent horizontalement */
     gap: 30px;
     width: 100%;
 }
@@ -279,7 +279,7 @@ p.info {
     background-color: white;
     padding: 5px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 1px var(--main-bg-color);
+    box-shadow: 5px 5px 10px 1px var(--main-bg-color);  /*pour les ombres*/
 }
 
 
@@ -332,7 +332,7 @@ p.info {
 .populaires-title {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: baseline; /* aligne les deux elements titre et chart line */
 
 }
 
@@ -358,7 +358,7 @@ p.info {
 }
 
 .card img {
-    object-fit: cover;
+    object-fit: cover; /* Pour que l'image soit ajuster à l interieur de son conteneur */
 
 }
 
@@ -407,7 +407,7 @@ p.info {
 
 .activites ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Pour que mes cases se mettent horizontalement */
     flex-wrap: wrap;
     gap: 30px;
     padding: 0
@@ -454,7 +454,7 @@ footer {
     box-sizing: border-box;
     background-color: var(--main-bg-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* pour que les deux elements soient alignés entre eux */
     gap: 20px;
     margin-top: 50px;
 }
@@ -486,12 +486,12 @@ footer li {
 
     .filters {
         flex-direction: column;
-        align-items: baseline;
+        align-items: baseline; /* aligne les deux elements titre et les buttons filtres */
         gap: 20px;
     }
 
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column; /* Pour que les deux sections soient en colonne */
     }
 
     .hebergements {
@@ -505,7 +505,7 @@ footer li {
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* Pour que mes cases se mettent horizontalement */
         justify-content: space-between;
     }
 
@@ -542,19 +542,18 @@ footer li {
 
     .infos_group,
     .filters,
-    .info,
-    main {
+    .info  {
         padding: 0 20px;
     }
 
     .header {
-        flex-direction: column;
-        justify-content: stretch;
+        flex-direction: column; /* Pour que le logo et le menu soient en colonne */
+        justify-content: stretch; /* pour que le logo et le menu soient alignés */
         height: auto;
     }
 
     .header_content {
-        width: 100%;
+        width: 100%; /* pour que le logo soit 100% de la largeur de l'en-tête */
     }
 
     .logo {
@@ -563,11 +562,11 @@ footer li {
 
     .menu {
         gap: 0;
-        width: 100%;
+        width: 100%; /* pour que le menu soit 100% de la largeur de l'en-tête */
     }
 
     .menu li {
-        width: 100%;
+        width: 100%; /* pour que le menu soit 100% de la largeur de l'en-tête */
     }
 
     .active {
@@ -580,7 +579,7 @@ footer li {
 
     .active:hover {
         color: var(--main-color);
-        border-top: 2px solid transparent;
+        border-top: 2px solid transparent; /* pour que le lien n'ait pas de bordure en haut */
         border-bottom: 2px solid var(--main-color);
     }
 
@@ -594,7 +593,7 @@ footer li {
     }
 
     form input::placeholder {
-        font-size: 15px;
+        font-size: 15px; /* pour que le placeholder soit plus petit */
     }
 
     form input {
@@ -602,7 +601,7 @@ footer li {
     }
 
     .mobile {
-        display: block;
+        display: block; 
         border-radius: 15px 15px 15px 15px;
         margin-left: -15px;
         padding: 15px 15px;
@@ -622,7 +621,7 @@ footer li {
     }
 
     .filters li {
-        box-sizing: border-box;
+        box-sizing: border-box; /* pour que le padding soit inclus dans la largeur */
         font-size: 14px;
         width: calc((100% - 10px) / 2);
     }
@@ -631,20 +630,24 @@ footer li {
 
     .hebergements-and-populaires {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* Pour que les deux sections soient en colonne et que la section populaires soit en haut */
         justify-content: space-between;
         width: 100%;
+        
     }
 
     .hebergements-and-populaires section {
         margin-bottom: 20px;
         padding-top: 20px;
+        border-radius: 0px 0px 15px 15px;
+        
     }
 
     /* Populaires */
 
     .populaires {
         margin-top: 20px;
+        
     }
 
     .section-title {
@@ -653,7 +656,7 @@ footer li {
     }
 
     .populaires-cards {
-        display: flex;
+        display: flex; /* Pour que les cartes soient en colonne */
         flex-direction: column;
         justify-content: space-between;
     }
@@ -666,7 +669,7 @@ footer li {
     /* Hebergements */
 
     .hebergements {
-        display: flex;
+        display: flex; /* Pour que les cartes soient en colonne */
         flex-direction: column;
         background-color: #FFF;
     }
@@ -691,8 +694,7 @@ footer li {
 
     .activites {
         width: 100%;
-        box-sizing: border-box;
-        padding: 0;
+        box-sizing: border-box; /* pour que le padding soit inclus dans la largeur */
     }
 
     .activites img {
@@ -717,7 +719,7 @@ footer li {
     /* Footer */
 
     footer {
-        display: flex;
+        display: flex; /* Pour que les elements soient en colonne */
         flex-direction: column;
         margin-top: 20px;
         gap: 50px;
@@ -728,5 +730,5 @@ footer li {
         margin-left: -5px;
     }
 
-
 }
+
