@@ -52,15 +52,15 @@ a {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
-
+    box-sizing: border-box; /* pour qu il y a pas de debordement sur mon main container*/
+    
 }
 
 /****** Header ***********/
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Pour que les elements dans le header se mettent en colonne */
+    justify-content: space-between; /* pour que le logo et le menu soient alignés */
     height: 79px;
     width: 100%;
     max-width: 1440px;
@@ -70,8 +70,8 @@ a {
 
 /****** logo ***********/
 .header_content {
-    display: flex;
-    align-items: center;
+    display: flex;  /* pour que le logo ne se colle pas en haut de la page */
+    align-items: center; /* pour centrer le logo */
     justify-content: center;
 }
 
@@ -81,20 +81,20 @@ a {
 
 /****** menu ***********/
 .menu {
-    display: flex;
-    list-style: none;
+    display: flex; 
+    list-style: none; /* Pour supprimer les puces */
     gap: 68px;
 
 }
 
-.active {
+.menu-item {
     display: inline-block; /**** Pour que les menus ne se collent pas en haut de la page ****/
     padding-top: 15px;
     text-align: center;
-    cursor: pointer;
+    cursor: pointer; /* Pour avoir la main lors du passage  de la souris dessus */
 }
 
-.active:hover {
+.menu-item:hover {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
 }
@@ -102,7 +102,7 @@ a {
 /****** infos_group ***********/
 
 .infos_group h1 {
-    font-size: 22px;
+    font-size: 22px; /** Taille de la police h1 utliser comme demander sur la maquette **/
     font-weight: 700;
 }
 
@@ -114,15 +114,16 @@ p.subtitle {
 
 /****** search box toute la formulaire de recherche ***********/
 form {
-    display: flex;
+    display: flex; 
     align-items: center;
 }
+
 
 /****** location dot ***********/
 form i {
     padding: 16px;
-    background-color: var(--main-bg-color);
-    border-radius: 15px 0 0 15px;
+    background-color: var(--main-bg-color); /* couleur de fond du location dot */
+    border-radius: 15px 0 0 15px; /* Pour arrondir les bords */
 }
 
 .fa-location-dot {
@@ -137,19 +138,18 @@ form input {
     font-size: 1rem;
 }
 
-
 input[value="Marseille, France"] {
-    display: inline-block;
+    display: inline-block; /* Pour que le input ne se colle pas a la bordure du formulaire de recherche */
     text-align: center;
 }
 
 /****** search-button ***********/
 form button {
     padding: 15px 20px;
-    border: none;
-    border-radius: 0 15px 15px 0;
+    border: none; 
+    border-radius: 0 15px 15px 0; /* Pour arrondir les bords */
     background-color: var(--main-color);
-    color: white;
+    color: white; /* couleur du texte rechercher sur le bouton */
     font-weight: 500;
 }
 
@@ -166,29 +166,29 @@ h2 {
     font-weight: 700;
 }
 
-.filters {
-    display: flex;
-    align-items: center;
+.filters { /* pour les 4 boutons filtres et le titre */
+    display: flex; /* pour aligner les elements horizontalement */
+    align-items: center; /* pour aligner le titre filtres et les boutons filtres horizontalement */
     margin-top: 28px;
     gap: 10px;
     margin-bottom: 28px;
 
 }
 
-.filters ul {
-    display: flex;
-    gap: 10px;
+.filters ul { /* pour chaque boutons filtres */
+    display: flex; /* pour aligner les boutons filtres horizontalement */
+    gap: 10px; /* pour espacer les boutons filtres */
     margin: 0;
     padding: 0;
 }
 
 
 .filters li {
-    display: flex;
-    align-items: center;
+    display: flex; /* pour espacer les texte dans les boutons filtres et les icons */
+    align-items: center; /* pour aligner le texte et l'icon dans les boutons filtres horizontalement */
     gap: 10px;
-    border: 2px solid var(--main-bg-color);
-    border-radius: 25px;
+    border: 2px solid var(--main-bg-color); /* couleur de la bordure du bouton filtre */
+    border-radius: 25px; /* pour arrondir les bords du bouton filtre */
     padding: 10px 15px;
     font-size: 17px;
     font-weight: 700;
@@ -207,42 +207,42 @@ h2 {
 }
 
 /****** button-info ***********/
-p.info {
+p.info { /* pour le paragraphe et le btn-info */
     display: flex; /* pour aligner au meme niveau texte et l'icon */
     height: 24px;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* pour aligner le texte et l'icon horizontalement */
+    gap: 10px; /* pour espacer le texte et l'icon */
     font-size: 16px;
     margin-bottom: 30px;
 }
 
 .btn-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* pour centrer l'icon dans le btn-info */
+    background-color: white; /* couleur de fond du btn-info */
     color: var(--main-color);
     width: 24px;
     height: 24px;
-    border: 1px solid #D9D9D9;
-    border-radius: 50%;
+    border: 1px solid #D9D9D9; /* couleur de la bordure du btn-info */
+    border-radius: 50%; /* pour arrondir les bords du btn-info */
     font-size: 12px;
 }
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between; /* Pour espacer mon logo et mes liens et les avoir sur la meme ligne*/
+    display: flex; /* Pour que les deux sections soient l une à cote de l autre */
+    justify-content: space-between; /* Pour espacer les sections hebergements et populaires */
 
 }
 
 .hebergements-and-populaires section {
-    border-radius: 20px;
+    border-radius: 20px; /* Pour arrondir la bordure des sections */
     padding: 30px;
-    box-sizing: border-box; /* Pour qu il ait pas de debordement entre mes cases*/
+    box-sizing: border-box; /* Pour qu il ait pas de debordement entre les sections hebergements et populaires */
 }
 
-.card-title {
+.card-title { /* titre des cartes */
     font-size: 16px;
     font-weight: 700;
     margin: 0;
@@ -259,47 +259,47 @@ p.info {
 /****** Hebergements ***********/
 
 
-.hebergements {
-    width: 65%;
-    background-color: var(--main-bg-color);
-    padding: 30px 0;
+.hebergements { 
+    width: 65%; /* largeur de la section hebergements 65% pour que la section hebergements ne deborde pas la section populaires */
+    background-color: var(--main-bg-color); /* la couleur grise de fond de la section hebergements */
+    padding: 30px 0; 
 }
 
-.cards {
-    display: flex;
-    flex-flow: wrap; /* Pour que mes cases se mettent horizontalement */
+.cards {  /* toutes les cartes */
+    display: flex; /* Pour que mes cartes soient alignées horizontalement */
+    flex-flow: wrap; /* Pour que mes cartes soient reparties sur la ligne */
     gap: 30px;
-    width: 100%;
+    width: 100%; /* largeur de mes cartes */
 }
 
-.lien-card {
-    width: calc((100% - 90px) / 3);
-    display: flex;
-    flex-direction: column;
+.lien-card { /* pour le lien de chaque carte */
+    width: calc((100% - 90px) / 3); 
+    display: flex; /* Pour que mes cartes soient alignées horizontalement */
+    flex-direction: column; /* Pour que mes cartes se mettent en colonne */
     background-color: white;
     padding: 5px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 1px var(--main-bg-color);  /*pour les ombres*/
+    box-shadow: 5px 5px 10px 1px var(--main-bg-color);  /*pour l effet ombrés des cards*/
 }
 
 
-.lien-card img {
+.lien-card img { /* image de chaque carte */
     width: 100%;
     height: 120px;
-    object-fit: cover;
+    object-fit: cover; /* pour que l'image ne soit pas redimensionné et s'adapte à son conteneur */
     margin-top: 0%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.card-content-hebergements {
+.card-content-hebergements { /* contenu de chaque carte ( titre et sous-titre ) */
     padding: 10px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-.card-title-hebergements {
+.card-title-hebergements { /* titre de chaque carte */
     font-size: 16px;
     font-weight: bold;
     color: black;
@@ -308,7 +308,7 @@ p.info {
 }
 
 
-.card-subtitle-hebergements {
+.card-subtitle-hebergements { /* sous-titre de chaque carte */
     font-size: 14px;
     margin-right: -5px;
 }
@@ -324,37 +324,37 @@ p.info {
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%;
+    width: 32%; 
     background-color: var(--main-bg-color);
 }
 
 /****** Populaires-title and chart line***********/
 .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline; /* aligne les deux elements titre et chart line */
+    display: flex; /* Pour que les deux elements titre et chart line soient alignés horizontalement */
+    justify-content: space-between; /* Pour espacer les deux elements titre et chart line */
+    align-items: baseline; /* aligne les deux elements titre et chart- line */
 
 }
 
 /****** Populaires-title ***********/
-.populaires h2 {
+.populaires h2 { /* titre de la section populaires */
     font-size: 22px;
     font-weight: 700;
     margin-top: 0;
 }
 
 
-.populaires-cards .card {
-    display: flex;
+.populaires-cards .card { /* cartes de la section populaires */
+    display: flex; /* Pour que les cartes et les card-content soient alignées horizontalement */
     margin-top: 33px;
-    width: 100%;
+    width: 100%; /* largeur de mes cartes prennent toute la largeur de la section populaires */
 }
 
 .card {
-    background-color: white;
+    background-color: white; /* couleur de fond de mes cartes */
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* pour les ombres*/
 }
 
 .card img {
@@ -375,7 +375,7 @@ p.info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
+    box-sizing: border-box; /* pour que les elements card-content ne debornent pas de mes cartes */
 }
 
 .populaires-cards .card-title {
@@ -485,21 +485,21 @@ footer li {
 @media (max-width: 1024px) {
 
     .filters {
-        flex-direction: column;
-        align-items: baseline; /* aligne les deux elements titre et les buttons filtres */
+        flex-direction: column; /* Pour que les boutons filtres se mettrent en dessous du titre filtres en colonne */
+        align-items: baseline; /* Pour que les boutons filtres ainsi que le titre filtres se mettent a gauche de la page */
         gap: 20px;
     }
 
     .hebergements-and-populaires {
-        flex-direction: column; /* Pour que les deux sections soient en colonne */
+        flex-direction: column; /* Pour que les deux sections se mettent en colonne et que la section populaires se mette en dessous de la section hebergements */
     }
 
     .hebergements {
-        width: 100%;
+        width: 100%; /* Pour que la section hebergements prenne toute la largeur de la page */
     }
 
     .populaires {
-        width: 100%;
+        width: 100%; /* Pour que la section populaires prenne toute la largeur de la page */
         margin-top: 50px;
     }
 
@@ -510,7 +510,7 @@ footer li {
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 30%; /* Pour que mes cartes se collent pas */
     }
 
     .populaires-cards .card-title {
@@ -543,7 +543,7 @@ footer li {
     .infos_group,
     .filters,
     .info  {
-        padding: 0 20px;
+        padding: 0 20px; /* Pour que ces 3 sections j'ai mis un padding de 20px à gauche et 20px à droite */
     }
 
     .header {
@@ -552,7 +552,7 @@ footer li {
         height: auto;
     }
 
-    .header_content {
+    .header_content { /*le conteneur du logo */
         width: 100%; /* pour que le logo soit 100% de la largeur de l'en-tête */
     }
 
@@ -566,10 +566,10 @@ footer li {
     }
 
     .menu li {
-        width: 100%; /* pour que le menu soit 100% de la largeur de l'en-tête */
+        width: 100%; 
     }
 
-    .active {
+    .menu-item {
         padding-top: 0px;
         width: 100%;
         padding-bottom: 15px;
@@ -577,14 +577,10 @@ footer li {
         border-bottom: 2px solid var(--filter-bg-color);
     }
 
-    .active:hover {
+    .menu-item:hover {
         color: var(--main-color);
         border-top: 2px solid transparent; /* pour que le lien n'ait pas de bordure en haut */
         border-bottom: 2px solid var(--main-color);
-    }
-
-    .infos_group {
-        gap: 35px;
     }
 
     form {
@@ -593,14 +589,14 @@ footer li {
     }
 
     form input::placeholder {
-        font-size: 15px; /* pour que le placeholder soit plus petit */
+        font-size: 15px; /* pour que le iput texte soit plus petit */
     }
 
     form input {
         width: 100%;
     }
 
-    .mobile {
+    .mobile { /* pour le bouton loupe */
         display: block; 
         border-radius: 15px 15px 15px 15px;
         margin-left: -15px;
@@ -616,13 +612,12 @@ footer li {
 
     .filters ul {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Pour que mes boutons se mettent sur à la ligne */
         width: 100%;
     }
 
     .filters li {
-        box-sizing: border-box; /* pour que le padding soit inclus dans la largeur */
-        font-size: 14px;
+        box-sizing: border-box;  /* pour que les boutons filtres ne debordent pas */
         width: calc((100% - 10px) / 2);
     }
 
@@ -694,7 +689,7 @@ footer li {
 
     .activites {
         width: 100%;
-        box-sizing: border-box; /* pour que le padding soit inclus dans la largeur */
+        box-sizing: border-box; /* pour qu il y a pas de debordement */
     }
 
     .activites img {
